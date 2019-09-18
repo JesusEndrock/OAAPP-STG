@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, shrink-to-fit=no">  
+    <title>OARS + ALPS</title>
+    <%= favicon_link_tag asset_path('favicon.ico'), rel: 'icon', type: "image/svg+xml" %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="OARS + ALPS">
+    <meta name="twitter:title" content="OARS + ALPS">
+    <meta name="twitter:description" content="Natural, Moisturizing, and Hydrating products to leave you feeling rejuvenated and refreshed.">
+    <meta name="twitter:creator" content="OARS + ALPS">
+    <meta name="twitter:image:type" content="image/jpeg">
+    <meta name="twitter:image" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero.png">
+    <meta name="twitter:domain" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>">
+    <meta property="og:title" content="OARS + ALPS" />
+    <meta property="og:description" content="Natural, Moisturizing, and Hydrating products to leave you feeling rejuvenated and refreshed." />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero.png" />    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body style="background:#fff; color:#000;">
+    <!-- Top Bar Start -->
+
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class=""><img src="/assets/logo_OA_1x.png" srcset="/assets/logo_OA_2x.png 2x" alt="OA"></div>
+          <!--<div class=""><a class="lightblue" href="#">Pre-order Now</a></div>-->
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Bar End -->  
+    <%= yield %>
+    <%= custom_bootstrap_flash %>
+  </body>
+</html>
